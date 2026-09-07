@@ -1,0 +1,248 @@
+:root {
+  --background: #f3ecdb;
+  --foreground: #1c352c;
+  --card: #faf6ea;
+  --border: #ddd2bb;
+  --primary: #1f4237;
+  --primary-foreground: #f3ecdb;
+  --muted-foreground: #5c6b62;
+  --accent: #e5b968;
+  --secondary: #e5ded0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #16241f;
+    --foreground: #f0ead9;
+    --card: #1c2f28;
+    --border: #2e4239;
+    --primary: #8fd6b6;
+    --primary-foreground: #16241f;
+    --muted-foreground: #b7c4bc;
+    --accent: #e6bd76;
+    --secondary: #24352d;
+  }
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Noto Sans Arabic', Tahoma, sans-serif;
+}
+a { color: inherit; }
+.wrap { max-width: 46rem; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
+header.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+.brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+.brand .mark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  flex-shrink: 0;
+}
+.brand .mark span {
+  position: absolute; inset: 0;
+  transform: rotate(45deg);
+  border-radius: 0.7rem;
+  background: var(--accent);
+}
+.brand .mark b {
+  position: relative; z-index: 1;
+  font-family: 'Amiri', serif;
+  color: var(--primary);
+  font-size: 1.05rem;
+}
+.brand span.name {
+  font-family: 'Amiri', serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--primary);
+}
+.home-link {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted-foreground);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.home-link:hover { color: var(--primary); border-color: var(--primary); }
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin: 0 0 0.6rem;
+}
+h1.page-title {
+  font-family: 'Amiri', serif;
+  font-weight: 700;
+  font-size: 2.1rem;
+  color: var(--primary);
+  margin: 0 0 0.7rem;
+}
+p.page-desc {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--muted-foreground);
+  margin: 0 0 2.2rem;
+  max-width: 34rem;
+}
+article.dhikr {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1.4rem;
+  padding: 1.5rem;
+  margin-bottom: 1.1rem;
+}
+article.dhikr .row-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+article.dhikr .badge {
+  display: inline-block;
+  background: var(--secondary);
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: 0.7rem;
+}
+button.fav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted-foreground);
+  padding: 0.35rem;
+  border-radius: 999px;
+  line-height: 0;
+  transition: color 0.2s, background 0.2s;
+}
+button.fav-btn:hover { background: var(--secondary); color: var(--primary); }
+button.fav-btn.active { color: var(--primary); }
+button.fav-btn svg { width: 1.15rem; height: 1.15rem; display: block; }
+h2.dhikr-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 0.4rem;
+}
+p.dhikr-text {
+  font-family: 'Amiri', serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 2;
+  color: var(--primary);
+  margin: 0;
+}
+p.dhikr-note {
+  margin: 0.9rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  color: var(--muted-foreground);
+  padding-right: 0.75rem;
+  border-right: 2px solid var(--accent);
+}
+.row-bottom {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+button.count-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+  border-radius: 1rem;
+  padding: 0.65rem 1rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+button.count-btn.done { background: var(--secondary); color: var(--primary); cursor: default; }
+button.count-btn .num { font-family: 'Amiri', serif; font-size: 1.05rem; }
+button.count-btn .label { font-size: 0.72rem; font-weight: 700; }
+button.reset-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 0.6rem;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  line-height: 0;
+}
+button.reset-btn:hover { border-color: var(--primary); color: var(--primary); }
+button.reset-btn svg { width: 1rem; height: 1rem; display: block; }
+nav.pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2rem 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+nav.pager a { text-decoration: none; color: var(--primary); }
+nav.pager a:hover { text-decoration: underline; }
+.all-categories {
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+}
+.all-categories p { font-size: 0.75rem; font-weight: 700; color: var(--muted-foreground); margin: 0 0 0.9rem; }
+.all-categories .grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.all-categories a {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--muted-foreground);
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+}
+.all-categories a:hover { color: var(--primary); border-color: var(--primary); }
+.all-categories a.current { color: var(--primary); border-color: var(--primary); background: var(--secondary); }
+footer.site-footer {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-family: 'Amiri', serif;
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1rem;
+}
+footer.site-footer span {
+  display: block;
+  margin-top: 0.3rem;
+  font-family: 'Noto Sans Arabic', sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}

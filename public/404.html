@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>الصفحة غير موجودة | ورد اليوم</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --background: hsl(42 30% 94%);
+      --foreground: hsl(163 25% 17%);
+      --card: hsl(42 36% 97%);
+      --border: hsl(38 18% 83%);
+      --primary: hsl(157 34% 25%);
+      --primary-foreground: hsl(42 30% 93%);
+      --muted-foreground: hsl(163 12% 42%);
+      --accent: hsl(38 77% 67%);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: hsl(160 24% 12%);
+        --foreground: hsl(42 30% 93%);
+        --card: hsl(160 22% 16%);
+        --border: hsl(157 18% 26%);
+        --primary: hsl(157 38% 65%);
+        --primary-foreground: hsl(160 24% 12%);
+        --muted-foreground: hsl(42 14% 69%);
+        --accent: hsl(38 74% 67%);
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      min-height: 100dvh;
+      background: var(--background);
+      color: var(--foreground);
+      font-family: 'Noto Sans Arabic', Tahoma, sans-serif;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .wrap {
+      width: 100%;
+      max-width: 30rem;
+      text-align: center;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 2rem;
+      padding: 2.75rem 2rem;
+      box-shadow: 0 30px 60px -35px rgba(0, 0, 0, 0.35);
+    }
+    .mark {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.5rem;
+      height: 3.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .mark span {
+      position: absolute;
+      inset: 0;
+      transform: rotate(45deg);
+      border-radius: 1rem;
+      background: var(--accent);
+    }
+    .mark b {
+      position: relative;
+      z-index: 1;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+    .code {
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--primary);
+      margin: 0 0 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    h1 {
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: var(--primary);
+      margin: 0 0 0.75rem;
+    }
+    p {
+      font-size: 0.95rem;
+      line-height: 1.9;
+      color: var(--muted-foreground);
+      margin: 0 0 2rem;
+    }
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--primary);
+      color: var(--primary-foreground);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.85rem 1.6rem;
+      border-radius: 999px;
+      box-shadow: 0 14px 26px -14px rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .home-btn:hover { transform: translateY(-2px); opacity: 0.92; }
+    .quote {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--primary);
+    }
+    .quote span {
+      display: block;
+      margin-top: 0.35rem;
+      font-family: 'Noto Sans Arabic', sans-serif;
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: var(--muted-foreground);
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <span class="mark"><span></span><b>و</b></span>
+    <p class="code">٤٠٤</p>
+    <h1>لم نجد هذه الصفحة</h1>
+    <p>يبدو أن الرابط الذي وصلت منه قديم أو غير صحيح. لا بأس، الطريق إلى الذكر لا ينقطع — عد إلى الرئيسية وتابع وردك.</p>
+    <a class="home-btn" href="/">
+      العودة إلى الرئيسية
+    </a>
+    <div class="quote">
+      «واذكر ربك إذا نسيت»
+      <span>الكهف ٢٤</span>
+    </div>
+  </main>
+</body>
+</html>
